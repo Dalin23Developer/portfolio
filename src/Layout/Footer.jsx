@@ -25,7 +25,7 @@ export const Footer = () => {
             {/* Logo & Copyright */}
             <div className="col-md-4 text-center text-md-start">
                 <a href="#" className="footer-logo text-white">
-                PM<span className="text-primary">.</span>
+                P<span className="text-primary">.</span>
                 </a>
                 <p className="footer-text mt-2">
                 </p>
