@@ -1,12 +1,17 @@
 import { Button } from "../components/Button";
-import { ArrowRight, ChevronDown, Github, Linkedin, Twitter, Download, } from "lucide-react";
+import { ArrowRight, ChevronDown, Github, Download, Instagram, Facebook, } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton"; 
 import profile_image from '../assets/images/profile-photo.jpg';
 import hero_bg from '../assets/images/hero-bg.jpg';
 
-const skills = [ "Laravel", "PHP", "Bootstrap", "React", "TypeScript", "MongoDB", "Figma", "Git", "GitHub", "Postman" ];
-
 export const Hero = () => {
+
+  const ConAccont = [
+    { Icon: Github, href: "https://github.com/Dalin23Developer" },
+    { Icon: Instagram, href: "https://www.instagram.com/lin2804542025/" },
+    { Icon: Facebook, href: "https://web.facebook.com/sok.lin.939283" },
+  ] 
+
   return (
     <section className="hero-section position-relative d-flex align-items-center overflow-hidden px-3" style={{minHeight: '120vh'}} >
       {/* Background */}
@@ -79,9 +84,9 @@ export const Hero = () => {
             {/* Social */}
             <div className="d-flex align-items-center gap-3 my-4 fade-in delay-4">
               <span className="small" style={{color: '#7a8491'}} >Follow me:</span>
-              {[Github, Linkedin, Twitter].map((Icon, i) => (
-                <a key={i} href="#" className="social-glass">
-                  <Icon size={20} />
+              {ConAccont.map((Acc, i) => (
+                <a key={i} href={Acc.href} className="social-glass">
+                  <Acc.Icon size={20} />
                 </a>
               ))}
             </div>
@@ -90,9 +95,7 @@ export const Hero = () => {
           {/* Right */}
           <div className="col-lg-6 text-center fade-in delay-3">
             <div className="profile-wrapper mx-auto">
-
               <div className="profile-glow"></div>
-
               <div className="profile-card">
                 <img
                   src={profile_image}
@@ -113,21 +116,6 @@ export const Hero = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Skills */}
-        <div className="skills-section fade-in delay-5" style={{marginBottom: '5rem', marginTop: '1rem'}}>
-          <p className="text-muted text-center small mb-4">
-            Technologies I work with
-          </p>
-
-          <div className="skills-marquee">
-            {[...skills, ...skills].map((skill, i) => (
-              <span key={i} className="skill-item">
-                {skill}
-              </span>
-            ))}
           </div>
         </div>
       </div>

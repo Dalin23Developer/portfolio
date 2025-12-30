@@ -1,11 +1,12 @@
 import { Navbar } from "./Layout/Navbar";
-import { Hero } from "./sections/Hero";
-import { About } from "./sections/About";
-import { Projects } from "./sections/Projects";
-import { Experience } from "./sections/Experience";
-import { Testimonials } from "./sections/Testimonials";
-import { Contact } from "./sections/Contact";
 import { Footer } from "./Layout/Footer";
+import HomePage from "./pages/Home";
+import AboutPage from "./pages/Abouts";
+import ProjectPage from "./pages/Projects";
+import SkillPage from "./pages/Skills";
+import ContactPage from "./pages/Contact";
+import ProjectDetailPage from "./pages/ProjectDetail";
+import { Routes, Route } from 'react-router-dom';
 import './assets/css/global.css';
 import './assets/css/custom.css';
 import './assets/css/layout.css'
@@ -15,11 +16,15 @@ function App() {
     <div className="min-h-screen overflow-x-hidden">
       <Navbar />
       <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Experience /> 
-        <Contact />
+          <Routes>
+              <Route index element={<HomePage /> } />
+              <Route path='/portfolio' element={<HomePage /> } />
+              <Route path='/abouts' element={<AboutPage /> } />
+              <Route path='/projects' element={<ProjectPage /> } />
+              <Route path='/skills' element={<SkillPage /> } />
+              <Route path='/contact' element={<ContactPage /> } />
+              <Route path='/project-detail' element={<ProjectDetailPage /> } />
+          </Routes>
       </main>
       <Footer />
     </div>

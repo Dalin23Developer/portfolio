@@ -1,14 +1,4 @@
- 
-const experiences = [
-  {
-    period: "2024 – 2025",
-    role: "Web Development",
-    company: "WINTECH SOFTWARE DEVELOPMENT (Cambodia)co., LTD",
-    description:"Built an Education Management System in Laravel, including a Library Management module, and prepared user-friendly documentation for clients, gaining practical experience in web development and system workflows.",
-    technologies: ["Laravel", "TypeScript", "jQuery", "MariaDB"],
-    current: true,
-  },
-];
+import { experiences } from "../data/PortfolioData";
 
 export const Experience = () => {
   return (
@@ -24,13 +14,11 @@ export const Experience = () => {
           </span>
 
           <h2 className="section-title animate-fade-in delay-1">
-            Experience that{" "}
-            <span className="section-title-accent">speaks volumes.</span>
+            Experience
           </h2>
 
           <p className="section-description animate-fade-in delay-2">
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+            My experience as a developer, highlighting the skills and projects I’ve worked on during my first year.
           </p>
         </div>
 

@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 import '../assets/css/layout.css'
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
+  { href: "/abouts", label: "About" },
+  { href: "/skills", label: "Skills" },
+  { href: "/projects", label: "Projects" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const Navbar = () => {
@@ -29,8 +30,8 @@ export const Navbar = () => {
             <div className="container-fluid px-3">
 
             {/* Logo */}
-            <a className="navbar-brand fw-bold" href="#">
-                PM<span className="text-primary">.</span>
+            <a className="navbar-brand fw-bold" href="/portfolio">
+                LA DALIN<span className="text-primary">.</span>
             </a>
 
             {/* Mobile Toggle */}
@@ -60,7 +61,7 @@ export const Navbar = () => {
             {/* CTA Button (Desktop) */}
             <div className="d-none d-md-block">
                 <Button size="sm">
-                    <a href="#contact" className="text-decoration-none text-white" >
+                    <a href="/contact" className="text-decoration-none text-white" >
                         Contact Me
                     </a>
                 </Button>

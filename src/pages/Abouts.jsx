@@ -1,13 +1,13 @@
-import { highlights } from "../data/PortfolioData";
+import { highlights } from "../data/PortfolioData"; 
 
-export const About = () => {
+const AboutPage = () => {
   return (
-    <section id="about" className="about-section py-5 position-relative overflow-hidden">
+    <section id="about" className="about-section py-5 mt-5 position-relative overflow-hidden">
       <div className="container-fluid position-relative z-1 px-4">
         <div className="row align-items-center gx-5">
           {/* Left Column */}
           <div className="col-lg-6 mb-4 mb-lg-0">
-            <h2 className="display-5 text-primary fw-bold mt-3 fade-in delay-1">
+            <h2 className="display-5 text-white fw-bold mt-3 fade-in delay-1">
               About Me
             </h2>
 
@@ -53,3 +53,5 @@ export const About = () => {
     </section>
   );
 };
+
+export default AboutPage;

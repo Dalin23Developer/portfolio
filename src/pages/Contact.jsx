@@ -1,10 +1,9 @@
-
+import { Mail, Phone, MapPin, } from "lucide-react";
 import { useState } from "react"; 
 import emailjs from "@emailjs/browser";
 import { contactInfo } from "../data/PortfolioData";
 
-
-export const Contact = () => {
+const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -61,7 +60,7 @@ export const Contact = () => {
     }
   };
   return (
-    <section id="contact" className="contact-section position-relative overflow-hidden py-5">
+    <section id="contact" className="contact-section mt-5 position-relative overflow-hidden py-5">
       {/* Background glows */}
       <div className="position-absolute top-0 start-0 w-100 h-100">
         <div className="glow glow-primary"></div>
@@ -170,6 +169,7 @@ export const Contact = () => {
         </div>
       </div>
     </section>
-
   );
 };
+
+export default ContactPage;
