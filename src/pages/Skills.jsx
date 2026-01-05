@@ -30,14 +30,6 @@ const SkillPage = () => {
                   <Card.Text className="text-secondary small mb-4">
                     {skill.desc}
                   </Card.Text>
-                  <div className="stars ">
-                    {[...Array(5)].map((_, index) => (
-                      <FaStar
-                        key={index}
-                        className={`me-1 ${index < skill.star ? "text-warning" : "text-muted"}`}
-                      />
-                    ))}
-                  </div>
                 </Card.Body>
               </Card>
             </Col>
